@@ -1,0 +1,19 @@
+<a
+  *ngIf="recipe"
+  href="#"
+  (click)="onRecipeSelect()"
+  class="list-group-item rounded list-group-item-light text-decoration-none list-group-item-action"
+>
+  <div class="d-flex justify-content-between">
+    <div>
+      <h4 class="mb-1 text-body">{{ recipe.name }}</h4>
+      <p class="mb-0 text-secondary">{{ recipe.description }}</p>
+    </div>
+    <img
+      [src]="recipe.imagePath"
+      [alt]="recipe.name"
+      class="img-fluid"
+      style="max-height: 50px;"
+    >
+  </div>
+</a>
