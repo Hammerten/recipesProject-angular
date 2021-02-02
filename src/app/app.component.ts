@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipes-project';
+  loadComponents: {recipeComponent: boolean, shoppingComponent: boolean} = {
+    recipeComponent: true, shoppingComponent: false
+  };
+
+  onNavClickFired(loadComponents: {recipeComponent: boolean, shoppingComponent: boolean}): void {
+    this.loadComponents = {
+      recipeComponent: loadComponents.recipeComponent,
+      shoppingComponent: loadComponents.shoppingComponent,
+    };
+  }
 }
+
