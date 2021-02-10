@@ -18,6 +18,7 @@ export class DropdownDirective {
       this.renderer.addClass(this.elRef.nativeElement, this.dropdownActivatorClassName);
       this.renderer.addClass(this.dropdownTargetElement, this.dropdownActivatorClassName);
     } else {
+      this.isOpen = !this.isOpen;
       this.renderer.removeClass(this.elRef.nativeElement, this.dropdownActivatorClassName);
       this.renderer.removeClass(this.dropdownTargetElement, this.dropdownActivatorClassName);
     }
