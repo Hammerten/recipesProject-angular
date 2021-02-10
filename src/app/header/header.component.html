@@ -8,8 +8,8 @@
       </ul>
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle">Manage</a>
-          <ul class="dropdown-menu">
+          <a [appDropdown]="dropdownTarget" href="#" class="nav-link dropdown-toggle">Manage</a>
+          <ul #dropdownTarget class="dropdown-menu">
             <li><a href="#" class="dropdown-item">Save Data</a></li>
             <li><a href="#" class="dropdown-item">Fetch Data</a></li>
           </ul>

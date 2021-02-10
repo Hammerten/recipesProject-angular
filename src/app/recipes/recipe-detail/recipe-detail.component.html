@@ -17,14 +17,16 @@
     <div class="col-sm-12">
       <div class="btn-group">
         <button
+          [appDropdown]="dropdownTarget"
           class="btn btn-primary dropdown-toggle"
+          data-target="recipeDetailDropdown"
           type="button">
           Manage Recipe <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">To Shopping List</a></li>
-          <li><a href="#">Edit Recipe</a></li>
-          <li><a href="#">Delete Recipe</a></li>
+        <ul #dropdownTarget class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">To Shopping List</a></li>
+          <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
+          <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
         </ul>
       </div>
     </div>
